@@ -1,7 +1,7 @@
 import sys
 
-# lines = open('G.txt', 'r').readlines()
-lines = sys.stdin.readlines()
+lines = open('G.txt', 'r').readlines()
+#lines = sys.stdin.readlines()
 for line in lines:
     if not line.strip(): continue
     for char in line.strip():
