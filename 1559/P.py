@@ -3,10 +3,8 @@ import sys, re
 lines = open('P.txt', 'r').readlines()
 # lines = sys.stdin.readlines()
 
-a = list(map(int, lines[1].strip().split()))
-Q = []
-for x in a:
-    Q.append(x)
+Q = list(map(int, lines[1].strip().split()))
+
 while Q:
     print(Q[0], end=' ')
     del Q[0]
