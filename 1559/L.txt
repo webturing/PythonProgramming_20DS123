@@ -1,0 +1,5 @@
+4
+zhangsan 2000 7 8
+lisi 2000 5 2
+wanger 2001 5 1
+mazi 2000 5 1
