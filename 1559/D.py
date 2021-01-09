@@ -1,12 +1,12 @@
 import sys
-lines = sys.stdin.readlines()
 
+#lines = open('D.txt', 'r').readlines()
+lines = sys.stdin.readlines()
 for line in lines:
+    if not line.strip(): continue
     a = list(map(int, line.strip().split()))
-    if a[0] == 0:
-        break
     del a[0]
     a = sorted(a, key=lambda x: -abs(x))
-    for e in a:
-        print(e, end=' ')
+    for each in a:
+        print(each, end=' ')
     print('')

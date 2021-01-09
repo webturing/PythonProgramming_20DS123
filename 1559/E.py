@@ -1,13 +1,19 @@
 import sys
-data = sorted(list(map(int, [x.strip() for x in sys.stdin.readlines() if x.strip()][1:])))
-dic = {}
-for d in data:
-    if d in dic.keys():
-        dic[d] += 1
+
+lines = open('E.txt', 'r').readlines()
+#lines = sys.stdin.readlines()
+del lines[0]
+a = [int(line.strip()) for line in lines if line.strip()]
+a = sorted(a)
+freq = {}
+for each in a:
+    if each in freq:
+        freq[each] += 1
     else:
-        dic[d] = 1
-mx = max(dic.values())
-for k in dic.keys():
-    if dic[k] == mx:
+        freq[each] = 1
+max_freq = max(freq.values())
+for (k, v) in freq.items():
+    if v == max_freq:
         print(k)
-        print(mx)
+        print(v)
+        break
