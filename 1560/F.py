@@ -1,0 +1,1 @@
+print(sorted(input().strip().split(), key=lambda s: -len(s))[0])
